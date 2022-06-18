@@ -35,14 +35,23 @@ const App = () => {
   return (
     <>
       <BrowserRouter>
-      <NavBar mode={mode} toggleMode={toggleMode} />
-      <Alert alert={alert} />
-      <div className="container m-3">
-        <Routes>
-          <Route path="/" element={<TextForm showAlert={showAlert} heading="Enter Text Below To Analyze"  mode={mode} />} />
-        <Route path="about" element={<About />} />
-        </Routes>
-      </div>
+        <NavBar mode={mode} toggleMode={toggleMode} />
+        <Alert alert={alert} />
+        <div className="container m-3">
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <TextForm
+                  showAlert={showAlert}
+                  heading="Enter Text Below To Analyze"
+                  mode={mode}
+                />
+              }
+            />
+            <Route path="about" element={<About />} />
+          </Routes>
+        </div>
       </BrowserRouter>
     </>
   );
