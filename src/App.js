@@ -44,12 +44,12 @@ const App = () => {
               element={
                 <TextForm
                   showAlert={showAlert}
-                  heading="Enter Text Below To Analyze"
+                  heading="UA - Word Counter, Character Counter, Remove extra spaces"
                   mode={mode}
                 />
               }
             />
-            <Route path="about" element={<About />} />
+            <Route path="about" element={<About mode={mode} />} />
           </Routes>
         </div>
       </BrowserRouter>
